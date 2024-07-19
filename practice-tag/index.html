@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table-tag</title>
+    <style>
+       
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        .heading {
+            padding: 15px;
+            background-color: cyan;
+        }
+        .table__day{
+            padding: 15px;
+            background-color:  yellow ;
+        }
+        th {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            background-color: goldenrod;
+        }
+
+        .table__data {
+            padding: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th class="heading">Time</th>
+                    <th class="heading" rowspan="2">9:30-10:30</th>
+                    <th class="heading" rowspan="2">10:30-11:30</th>
+                    <th class="heading" rowspan="2">11:30-12:30</th>
+                    <th class="heading" rowspan="2">12:30-1:30</th>
+                    <th class="heading" rowspan="2">1:30-2:00</th>
+                    <th class="heading" rowspan="2">2:00-3:00</th>
+                    <th class="heading" rowspan="2">3:00-4:00</th>
+
+                </tr>
+                <tr>
+                    <th class="table__day">Day</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Monday--->
+                <tr>
+                    <td class="table__day">Monday</td>
+                    <!-- Subjects -->
+                    <td class="table__data">-</td> <!-- 9:30-10:30 -->
+                    <td class="table__data">DWDM</td> <!-- 10:30-11:30 -->
+                    <td class="table__data">DAA</td> <!-- 11:30-12:30 -->
+                    <td class="table__data">MIC</td> <!-- 12:30-1:30 -->
+                    <td class="table__data" rowspan="6" style="background-color: gray;">LUNCH</td> <!-- 1:30-2:00 -->
+                    <td class="table__data" colspan="2">DBMS-laB</td> <!-- 2:00-3:00 -->
+
+                </tr>
+                <!--Tuesday--->
+                <tr>
+                    <td class="table__day">Tuesday</td>
+                    <!-- Subjects -->
+                    <td class="table__data">DAA</td> <!-- 9:30-10:30 -->
+                    <td class="table__data">DWDM</td> <!-- 10:30-11:30 -->
+                    <td class="table__data">SE</td> <!-- 11:30-12:30 -->
+                    <td class="table__data">WET</td> <!-- 12:30-1:30 -->
+                    <!-- <td class="table__data" >LUNCH</td>  1:30-2:00 -->
+                    <td class="table__data">DBMS</td> <!-- 2:00-3:00 -->
+                    <td class="table__data">MIC</td> <!-- 3:00-4:00 -->
+                </tr>
+                <!--Wednesday--->
+                <tr>
+                    <td class="table__day">Wednesday</td>
+                    <!-- Subjects -->
+                    <td class="table__data">-</td> <!-- 9:30-10:30 -->
+                    <td class="table__data">DWDM</td> <!-- 10:30-11:30 -->
+                    <td class="table__data">WET</td> <!-- 11:30-12:30 -->
+                    <td class="table__data">MIC</td> <!-- 12:30-1:30 -->
+                    <!-- <td class="table__data" >LUNCH</td>  1:30-2:00 -->
+                    <td class="table__data">SE</td> <!-- 2:00-3:00 -->
+                    <td class="table__data">DAA</td> <!-- 3:00-4:00 -->
+                </tr>
+                <!--Thursday--->
+                <tr>
+                    <td class="table__day">Thursday</td>
+                    <!-- Subjects -->
+                    <td class="table__data">DAA</td> <!-- 9:30-10:30 -->
+                    <td class="table__data">DWDM</td> <!-- 10:30-11:30 -->
+                    <td class="table__data">SE</td> <!-- 11:30-12:30 -->
+                    <td class="table__data">MIC</td> <!-- 12:30-1:30 -->
+                    <!-- <td class="table__data" ></td>  1:30-2:00 -->
+                    <td class="table__data">DBMS</td> <!-- 2:00-3:00 -->
+                    <td class="table__data"></td> <!-- 3:00-4:00 -->
+                </tr>
+                <!--Friday--->
+                <tr>
+                    <td class="table__day">Friday</td>
+                    <!-- Subjects -->
+                    <td class="table__data" colspan="2">WET-LAB</td> <!-- 9:30-10:30 -->
+                    <!-- <td class="table__data" ></td> 10:30-11:30 -->
+                    <td class="table__data">WET</td> <!-- 11:30-12:30 -->
+                    <td class="table__data">DBMS</td> <!-- 12:30-1:30 -->
+                    <!-- <td class="table__data" ></td>  1:30-2:00 -->
+                    <td class="table__data"></td> <!-- 2:00-3:00 -->
+                    <td class="table__data"></td> <!-- 3:00-4:00 -->
+                </tr>
+                <!--Saturday--->
+                <tr>
+                    <td class="table__day">Saturday</td>
+                    <!-- Subjects -->
+                    <td class="table__data"></td> <!-- 9:30-10:30 -->
+                    <td class="table__data">SE</td> <!-- 10:30-11:30 -->
+                    <td class="table__data">WET</td> <!-- 11:30-12:30 -->
+                    <td class="table__data">DWDM</td> <!-- 12:30-1:30 -->
+                    <!-- <td class="table__data" ></td>  1:30-2:00 -->
+                    <td class="table__data"></td> <!-- 2:00-3:00 -->
+                    <td class="table__data"></td> <!-- 3:00-4:00 -->
+                </tr>
+
+
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>
