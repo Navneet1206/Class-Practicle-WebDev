@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java-script-pr01</title>
+    <style>
+        button{
+            padding: 10px;
+            border: 2px solid gray;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello this is javascript practice 01 </h1>
+    <p id="demo">this will not print </p>
+    <button type="button" onclick="button_function()" >Click me</button>
+    <script>
+        function button_function() {
+            document.getElementById("demo").innerHTML = "My First JavaScript";
+        }
+    </script>
+</body>
+
+</html>
