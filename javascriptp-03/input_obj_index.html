@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Input Example</title>
+    <style>
+        #demo{
+        background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <form id="inputForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+        
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <p id="demo"></p>
+
+    <script>
+        // script.js
+function submitForm() {
+    // Create an object to hold the input values
+    let userInput = {};
+
+    // Get input values from the form
+    userInput.name = document.getElementById('name').value;
+    userInput.age = document.getElementById('age').value;
+
+    // Display the object in the console (or you can process it further)
+    console.log(userInput);
+
+    // Optional: Display the object in the web page
+    document.getElementById('demo').innerHTML = "Name of the user is " + userInput.name + " and age is " + userInput.age;
+    // alert('Name: ' + userInput.name + '\nAge: ' + userInput.age);
+}
+
+    </script>
+</body>
+</html>

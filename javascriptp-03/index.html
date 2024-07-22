@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #demo{
+                background-color: aquamarine;
+                font-weight: bold;
+                color: red;
+            }
+        </style>
+    </head>
+<body>
+<h1>JavaScript Objects</h1>
+<h2>Accessing Nested Objects</h2>
+
+<span id="demo"></span>
+
+<script>
+// Create nested Objects
+const myObj = {
+  name: "John",
+  age: 30,
+  myCars: {
+    car1: "Ford",
+    car2: "BMW",
+    car3: "Fiat"
+  }
+}
+document.getElementById("demo").innerHTML = myObj["myCars"]["car2"] + " " + myObj.myCars.car1;
+</script>
+
+</body>
+</html>
