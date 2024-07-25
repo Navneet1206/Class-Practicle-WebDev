@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.date-time-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+li span {
+    flex: 1;
+    word-break: break-word;
+}
+
+li .date-time {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+li button {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+li button:hover {
+    background-color: #c82333;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .input-container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    input[type="text"] {
+        flex: 2;
+    }
+
+    .date-time-container {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    button {
+        flex: 0.5;
+    }
+}
