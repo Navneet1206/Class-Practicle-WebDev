@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-web</title>
+</head>
+<body>
+    <!-- <header></header> -->
+    <main>
+        <p id="mine" ></p>
+        <button onclick="hello()" >press me</button>
+    </main>
+    <!-- <footer></footer> -->
+
+    <script>
+        let o={
+            "Name" : "Navneet Vishwakarma",
+            "Class" : "5 Btech B02"
+        }
+        function hello(){
+            document.getElementById('mine').innerHTML="Hello" + " World" + " " + o.Name
+        }
+    </script>
+</body>
+</html>
