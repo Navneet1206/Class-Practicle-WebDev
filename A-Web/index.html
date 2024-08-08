@@ -4,24 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A-web</title>
+    <style>
+      #mine {
+        /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+        color: aqua;
+        font-size: 50px;
+        font-weight: lighter;
+      }
+
+      button {
+        padding: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        background-color: rgba(255, 159, 239, 0.692);
+      }
+
+      .Box {
+        display: grid;
+        justify-content: center;
+      }
+    </style>
   </head>
+
   <body>
     <main>
-      <p id="mine"></p>
-      <button onclick="hello()">press me</button>
+      <div class="Box">
+        <h1>Introduction</h1>
+      </div>
+
+      <div class="Box">
+        <p id="mine"></p>
+        <button onclick="hello()">Press me</button>
+      </div>
     </main>
-
-    <footer></footer>
-
     <script>
       let o = {
         Name: "Navneet Vishwakarma",
         Class: "5 Btech B02",
       };
       function hello() {
-        document.getElementById("mine").innerHTML =
-          "I " + "am " + " " + o.Name;
+        document.getElementById("mine").innerHTML = "html";
+        // const element =document.getElementById("mine");
+        // setInterval(function() {element.innerHTML += "I " + "am " + " " + o.Name }, 1000);
       }
+
+      // let html =` <div class="Box">
+      // <center>
+      // <h1>Introduction</h1>
+      // </center>
+      // </div>`
     </script>
   </body>
 </html>
