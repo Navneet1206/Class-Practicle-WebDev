@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A-web</title>
     <style>
-      #mine {
+      /* #mine { */
         /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-        color: aqua;
-        font-size: 50px;
-        font-weight: lighter;
-      }
+        /* color: aqua; */
+        /* font-size: 50px; */
+        /* font-weight: lighter; */
+      /* } */
 
       button {
         padding: 10px;
@@ -22,6 +22,16 @@
       .Box {
         display: grid;
         justify-content: center;
+      }
+      pre {
+        background-color: #f0f0f0; /* Light gray background */
+        padding: 10px; /* Add some padding */
+        border: 1px solid #ddd; /* Light gray border */
+      }
+
+      code {
+        font-family: monospace; /* Use a monospace font */
+        font-size: 14px; /* Set font size */
       }
     </style>
   </head>
@@ -43,16 +53,107 @@
         Class: "5 Btech B02",
       };
       function hello() {
-        document.getElementById("mine").innerHTML = "html";
-        // const element =document.getElementById("mine");
-        // setInterval(function() {element.innerHTML += "I " + "am " + " " + o.Name }, 1000);
+        // document.getElementById("mine").innerHTML = html;
+        const element = document.getElementById("mine");
+        setInterval(()=>{
+          element.innerHTML=html;
+        }, 1000);
+        // const element = document.getElementById("mine");
+        // setInterval(()=>{
+        //   element.innerHTML="Hello world";
+        // }, 1000);
+        
       }
+      let html = ` <div class="Box">
+      <center>
+      <h1>Introduction</h1>
+      </center>
+      </div>
+        <pre>
+  <code>
+    #include <vector>
+#include <string>
+#include <unordered_map>
+#include <iostream>
 
-      // let html =` <div class="Box">
-      // <center>
-      // <h1>Introduction</h1>
-      // </center>
-      // </div>`
-    </script>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> findSubstring(string s, vector<string>& words) {
+        vector<int> result;
+        if (s.empty() || words.empty()) return result;
+
+        int wordLength = words[0].length();
+        int wordCount = words.size();
+        int totalLength = wordLength * wordCount;
+
+        // Check if the total length exceeds the length of s
+        if (s.length() < totalLength) return result;
+
+        // Create a map to count occurrences of each word
+        unordered_map<string, int> wordMap;
+        for (const auto& word : words) {
+            wordMap[word]++;
+        }
+
+        // Iterate through the string with a sliding window
+        for (int i = 0; i < wordLength; i++) { // Iterate over each possible starting point
+            int left = i;
+            int count = 0; // Count of valid words found
+            unordered_map<string, int> seenWords;
+
+            for (int j = i; j <= s.length() - wordLength; j += wordLength) {
+                string word = s.substr(j, wordLength);
+                
+                if (wordMap.find(word) != wordMap.end()) {
+                    seenWords[word]++;
+                    count++;
+
+                    // If the word count exceeds the expected count, move the left pointer
+                    while (seenWords[word] > wordMap[word]) {
+                        string leftWord = s.substr(left, wordLength);
+                        seenWords[leftWord]--;
+                        count--;
+                        left += wordLength;
+                    }
+
+                    // If we have found all words
+                    if (count == wordCount) {
+                        result.push_back(left);
+                    }
+                } else {
+                    // Reset the window if the word is not valid
+                    seenWords.clear();
+                    count = 0;
+                    left = j + wordLength; // Move left pointer to the next position
+                }
+            }
+        }
+
+        return result;
+    }
+};
+
+int main() {
+    Solution sol;
+    string s = "barfoothefoobarman";
+    vector<string> words = {"foo", "bar"};
+    vector<int> result = sol.findSubstring(s, words);
+
+    cout << "Output: ";
+    for (int index : result) {
+        cout << index << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+  </code>
+</pre>
+      `;
+   
+       </script>
   </body>
 </html>
