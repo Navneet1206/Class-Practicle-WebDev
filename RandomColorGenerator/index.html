@@ -12,16 +12,32 @@
         }
 
         #demo {
-            min-height: 50vh;
+            min-height: 500vh;
             text-align: center;
             padding: 5rem;
         }
+        button{
+            cursor: pointer;
+           margin-top: 20px;
+           padding: 10px;
+           border-radius: 2rem;
+        }
+        p{
+            position: absolute;
+        }
+
     </style>
 </head>
 
 <body>
     <div id="demo">
-        <center>hello this is Random Color generator</center>In every refresh it will generate the random color
+       <center>
+        <p>
+            <center>hello this is Random Color generator</center>In every refresh it will generate the random color 
+        </p>
+       </center>     <center>
+            <button onclick="button()" >Change color</button>
+        </center>
     </div>
     <script>
         function getRandomColor() {
@@ -30,9 +46,10 @@
             const b = Math.floor(Math.random() * 256);
             return `rgb(${r}, ${g}, ${b})`;
         }
-
-        document.getElementById("demo").style.color = getRandomColor();
-        document.getElementById("demo").style.backgroundColor = getRandomColor();
+        function button(){
+            document.getElementById("demo").style.color = getRandomColor();
+            document.getElementById("demo").style.backgroundColor = getRandomColor();
+        }
     </script>
 </body>
 
