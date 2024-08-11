@@ -5,46 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A-web</title>
-  <style>
-    /* #mine { */
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    /* color: aqua; */
-    /* font-size: 50px; */
-    /* font-weight: lighter; */
-    /* } */
-
-    button {
-      padding: 10px;
-      border-radius: 20px;
-      cursor: pointer;
-      background-color: rgba(255, 159, 239, 0.692);
-    }
-
-    .Box {
-      display: grid;
-      justify-content: center;
-      width: 80vw;
-    }
-
-    pre {
-      background-color: #f0f0f0;
-      /* Light gray background */
-      padding: 10px;
-      /* Add some padding */
-      border: 1px solid #ddd;
-      /* Light gray border */
-      min-width: 80vw;
-      margin-left: 20vw;
-      
-    }
-
-    code {
-      font-family: monospace;
-      /* Use a monospace font */
-      font-size: 14px;
-      /* Set font size */
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -148,74 +109,8 @@
       <button id="output-button" onclick="hello()">Output</button>
     </center>
   </main>
-  <script>
-    let o = {
-      Name: "Navneet Vishwakarma",
-      Class: "5 Btech B02",
-    };
-    let intervalId;
-    function hello() {
-      const element = document.getElementById("mine");
-      intervalId = setInterval(() => {
-        element.innerHTML = html;
-      }, 1000);
-      const outputButton = document.getElementById("output-button");
-      outputButton.style.display = "none";
-      const closeButton = document.createElement("button");
-      closeButton.textContent = "Close Output";
-      closeButton.onclick = closeOutput;
-      document.body.appendChild(closeButton);
-    }
-    function closeOutput() {
-      const element = document.getElementById("mine");
-      element.innerHTML = "";
-      clearInterval(intervalId);
-      const closeButton = document.querySelector("button:last-child");
-      closeButton.remove();
-      const outputButton = document.getElementById("output-button");
-      outputButton.style.display = "block";
-    }
-    let html = `
-    <pre>
-      <code>
-        <h1>Output : </h1>
-Initial string: Hello, World!
-Size: 13
-Capacity: 15
-Is empty: No
-After resize: Hello
-After shrink_to_fit - Capacity: 5
-First character: H
-Last character: o
-Character at index 1: e
-After appending: Hello, C++!
-After insertion: Hello there, C++!
-After erasing: Hello, C++!
-After replacing: Hello, everyone!
-After clearing: Is empty? Yes
-Comparing str and other: Not equal
-Substring: Hello
-Find 'World': Found at position 7
-Find last 'l': Found at position 3
-Find first vowel: Found at position 1
-Find last vowel: Found at position 4
-Find first not of 'Hello, ': Found at position 7
-Find last not of 'World!': Found at position 4
-Number to string: 123
-String to number: 456
-Iterating over string: H e l l o ,   W o r l d !
-Reverse iterating: ! d l r o W   , o l l e H
-C-String: Hello, World!
-After swap, str: Hello, C++!, other: Hello, World!
-Regex search: Match found
-After regex replace: XX, XX!
-String from stringstream: Stream with number: 42
 
-      </code>
-  </pre>
-      `;
-
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
